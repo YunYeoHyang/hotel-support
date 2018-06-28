@@ -47,7 +47,7 @@ CREATE TABLE `User` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
-insert into User(user_id,user_name,password,nickname,user_status,order_id,collect_id,stock_id,capital_id,contract_id,entrust_id) value ('u001','dujingan','123456','diaosi','o001','1','col001','s001','cap001','con001','en001')
+insert into User(user_id,user_name,password,nickname,user_status,order_id,collect_id,stock_id,capital_id,contract_id,entrust_id) value ('u001','dujingan','123456','diaosi','o001','1','col001','s001','cap001','con001','en001');
 --
 -- Dumping data for table `User`
 --
