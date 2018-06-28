@@ -1,18 +1,87 @@
 package com.czxy.hotel.domain;
 
+
 public class Stock {
 
-    /*
-    *
-    * Stock_id		房源ID
-		Price		房价
-		Describe		描述
-		Stock_type	房源类型
-		Model_id		户型ID
-		Stock_ status	房源状态
-		Info_id		房屋信息ID
-		Configure_id	配置设施ID
-    * */
-    private  String  Describe;
+  private String stockId;
+  private double price;
+  private String describe;
+  private String stockType;
+  private String modelId;
+  private Integer stockStatus;
+  private String infoId;
+  private String configureId;
+
+
+  public String getStockId() {
+    return stockId;
+  }
+
+  public void setStockId(String stockId) {
+    this.stockId = stockId;
+  }
+
+
+  public double getPrice() {
+    return price;
+  }
+
+  public void setPrice(double price) {
+    this.price = price;
+  }
+
+
+  public String getDescribe() {
+    return describe;
+  }
+
+  public void setDescribe(String describe) {
+    this.describe = describe;
+  }
+
+
+  public String getStockType() {
+    return stockType;
+  }
+
+  public void setStockType(String stockType) {
+    this.stockType = stockType;
+  }
+
+
+  public String getModelId() {
+    return modelId;
+  }
+
+  public void setModelId(String modelId) {
+    this.modelId = modelId;
+  }
+
+
+  public Integer getStockStatus() {
+    return stockStatus;
+  }
+
+  public void setStockStatus(Integer stockStatus) {
+    this.stockStatus = stockStatus;
+  }
+
+
+  public String getInfoId() {
+    return infoId;
+  }
+
+  public void setInfoId(String infoId) {
+    this.infoId = infoId;
+  }
+
+
+  public String getConfigureId() {
+    return configureId;
+  }
+
+  public void setConfigureId(String configureId) {
+    this.configureId = configureId;
+  }
 
 }

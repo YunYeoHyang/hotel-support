@@ -32,19 +32,19 @@ DROP TABLE IF EXISTS `User`;
 
 -- 用户表
 CREATE TABLE `User` (
-  `user_id` varchar(36) NOT NULL,
-  `user_name` varchar(50) NOT NULL,  -- 用户名
-  `password` varchar(50) NOT NULL,   -- 密码
-  `nickname` varchar(50) DEFAULT NULL,  -- 昵称
-  `order_id` varchar(36) DEFAULT NULL,  -- 订单ID
-  `user_status` int(11) NOT NULL,       -- 用户状态
-  `collect_id` varchar(36) DEFAULT NULL,  -- 收藏ID
-  `stock_id` varchar(36) DEFAULT NULL,    -- 房源ID
-  `capital_id` varchar(36) DEFAULT NULL,  -- 资产ID
-  `contract_id` varchar(36) DEFAULT NULL, -- 合同ID
-  `entrust_id` varchar(36) DEFAULT NULL,  -- 委托ID
-  PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    `user_id` VARCHAR(36) NOT NULL,
+    `user_name` VARCHAR(50) NOT NULL,
+    `password` VARCHAR(50) NOT NULL,
+    `nickname` VARCHAR(50) DEFAULT NULL,
+    `order_id` VARCHAR(36) DEFAULT NULL,
+    `user_status` INT(11) NOT NULL,
+    `collect_id` VARCHAR(36) DEFAULT NULL,
+    `stock_id` VARCHAR(36) DEFAULT NULL,
+    `capital_id` VARCHAR(36) DEFAULT NULL,
+    `contract_id` VARCHAR(36) DEFAULT NULL,
+    `entrust_id` VARCHAR(36) DEFAULT NULL,
+    PRIMARY KEY (`user_id`)
+)  ENGINE=INNODB DEFAULT CHARSET=UTF8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 insert into User(user_id,user_name,password,nickname,user_status,order_id,collect_id,stock_id,capital_id,contract_id,entrust_id) value ('u001','dujingan','123456','diaosi','o001','1','col001','s001','cap001','con001','en001');
@@ -67,13 +67,13 @@ DROP TABLE IF EXISTS `capital`;
 
 -- 资产表
 CREATE TABLE `capital` (
-  `capital_id` varchar(36) NOT NULL,
-  `user_id` varchar(36) NOT NULL, -- 所属用户ID
-  `remainder` double NOT NULL,    -- 余额
-  `integral` int(11) NOT NULL,    -- 积分
-  `coupon_id` varchar(36) DEFAULT NULL, -- 优惠卷ID
-  PRIMARY KEY (`capital_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    `capital_id` VARCHAR(36) NOT NULL,
+    `user_id` VARCHAR(36) NOT NULL,
+    `remainder` DOUBLE NOT NULL,
+    `integral` INT(11) NOT NULL,
+    `coupon_id` VARCHAR(36) DEFAULT NULL,
+    PRIMARY KEY (`capital_id`)
+)  ENGINE=INNODB DEFAULT CHARSET=UTF8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,10 +95,10 @@ DROP TABLE IF EXISTS `collect`;
 
 -- 收藏表
 CREATE TABLE `collect` (
-  `collerct_id` varchar(36) NOT NULL,
-  `stock_id` varchar(36) NOT NULL, -- 房源表
-  PRIMARY KEY (`collerct_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    `collerct_id` VARCHAR(36) NOT NULL,
+    `stock_id` VARCHAR(36) NOT NULL,
+    PRIMARY KEY (`collerct_id`)
+)  ENGINE=INNODB DEFAULT CHARSET=UTF8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -120,11 +120,11 @@ DROP TABLE IF EXISTS `contract`;
 
 -- 合同表
 CREATE TABLE `contract` (
-  `contract_id` varchar(36) NOT NULL,
-  `user_id` varchar(36) NOT NULL, -- 所属用户
-  `file_url` varchar(50) NOT NULL,  -- 文件路径
-  PRIMARY KEY (`contract_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    `contract_id` VARCHAR(36) NOT NULL,
+    `user_id` VARCHAR(36) NOT NULL,
+    `file_url` VARCHAR(50) NOT NULL,
+    PRIMARY KEY (`contract_id`)
+)  ENGINE=INNODB DEFAULT CHARSET=UTF8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -146,11 +146,11 @@ DROP TABLE IF EXISTS `entrust`;
 
 -- 委托表
 CREATE TABLE `entrust` (
-  `entrust_id` varchar(36) NOT NULL,
-  `user_id` varchar(36) NOT NULL, -- 所属用户
-  `stock_id` varchar(36) NOT NULL, -- 房源ID
-  PRIMARY KEY (`entrust_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    `entrust_id` VARCHAR(36) NOT NULL,
+    `user_id` VARCHAR(36) NOT NULL,
+    `stock_id` VARCHAR(36) NOT NULL,
+    PRIMARY KEY (`entrust_id`)
+)  ENGINE=INNODB DEFAULT CHARSET=UTF8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -172,10 +172,10 @@ DROP TABLE IF EXISTS `model`;
 
 -- 户型表
 CREATE TABLE `model` (
-  `model_id` varchar(36) NOT NULL, -- 户型ID
-  `model_name` varchar(50) NOT NULL, -- 户型名称
-  PRIMARY KEY (`model_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    `model_id` VARCHAR(36) NOT NULL,
+    `model_name` VARCHAR(50) NOT NULL,
+    PRIMARY KEY (`model_id`)
+)  ENGINE=INNODB DEFAULT CHARSET=UTF8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -197,12 +197,12 @@ DROP TABLE IF EXISTS `orders`;
 
 -- 订单表
 CREATE TABLE `orders` (
-  `order_id` varchar(36) NOT NULL,
-  `visit_time` date NOT NULL,   -- 看房时间
-  `order_status` int(11) NOT NULL,  -- 订单状态
-  `stock_id` varchar(36) NOT NULL,  -- 房源ID
-  PRIMARY KEY (`order_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    `order_id` VARCHAR(36) NOT NULL,
+    `visit_time` DATE NOT NULL,
+    `order_status` INT(11) NOT NULL,
+    `stock_id` VARCHAR(36) NOT NULL,
+    PRIMARY KEY (`order_id`)
+)  ENGINE=INNODB DEFAULT CHARSET=UTF8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -224,16 +224,16 @@ DROP TABLE IF EXISTS `stock`;
 
 -- 房源表
 CREATE TABLE `stock` (
-  `stock_id` varchar(36) NOT NULL,
-  `price` double NOT NULL,  -- 价格
-  `describe` varchar(100) DEFAULT NULL, -- 描述
-  `stock_type` varchar(50) DEFAULT NULL, -- 房源类型
-  `model_id` varchar(36) NOT NULL,  -- 户型ID
-  `stock_status` int(11) NOT NULL,  -- 房源状态
-  `info_id` varchar(36) NOT NULL,   -- 房屋信息ID
-  `configure_id` varchar(36) NOT NULL,  -- 配置设施ID
-  PRIMARY KEY (`stock_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    `stock_id` VARCHAR(36) NOT NULL,
+    `price` DOUBLE NOT NULL,
+    `describe` VARCHAR(100) DEFAULT NULL,
+    `stock_type` VARCHAR(50) DEFAULT NULL,
+    `model_id` VARCHAR(36) NOT NULL,
+    `stock_status` INT(11) NOT NULL,
+    `info_id` VARCHAR(36) NOT NULL,
+    `configure_id` VARCHAR(36) NOT NULL,
+    PRIMARY KEY (`stock_id`)
+)  ENGINE=INNODB DEFAULT CHARSET=UTF8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
