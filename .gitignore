@@ -98,3 +98,6 @@ hotel-web/target/hotel-web/slick/
 hotel-web/target/hotel-web/success.jsp
 hotel-web/target/hotel-web/upload/
 /hotel-pojo/target/
+/hotel-dao/target/
+/hotel-service/target/
+/hotel-web/target/
