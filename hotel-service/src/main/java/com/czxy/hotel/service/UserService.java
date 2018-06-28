@@ -1,4 +1,4 @@
 package com.czxy.hotel.service;
 
-public interface StockService {
+public interface UserService {
 }
