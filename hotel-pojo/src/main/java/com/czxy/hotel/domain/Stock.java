@@ -14,4 +14,5 @@ public class Stock {
 		Configure_id	配置设施ID
     * */
     private  String  Describe;
+
 }
