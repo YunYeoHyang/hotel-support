@@ -12,7 +12,6 @@ public class Stock {
 		Stock_ status	房源状态
 		Info_id		房屋信息ID
 		Configure_id	配置设施ID
-		曾令梓是狗屎
     * */
     private  String  Describe;
 }
