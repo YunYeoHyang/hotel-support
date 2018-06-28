@@ -106,3 +106,5 @@ hotel-web/target/hotel-web/upload/
 /hotel-commons/hotel-commons.iml
 /hotel-dao/hotel-dao.iml
 /hotel-pojo/hotel-pojo.iml
+/hotel-service/hotel-service.iml
+/hotel-web/hotel-web.iml
