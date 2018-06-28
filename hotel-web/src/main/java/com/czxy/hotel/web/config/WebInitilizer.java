@@ -14,8 +14,8 @@ public class WebInitilizer implements WebApplicationInitializer {
 
         AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
         applicationContext.register(MVCConfiguration.class);
-        applicationContext.register(SpringConfiguration.class);
         applicationContext.register(MyBatisConfiguration.class);
+        applicationContext.register(SpringConfiguration.class);
 
         FilterRegistration.Dynamic filter = servletContext.addFilter("ceFilter", new CharacterEncodingFilter("UTF-8"));
 
@@ -27,3 +27,4 @@ public class WebInitilizer implements WebApplicationInitializer {
         springmvc.setLoadOnStartup(2);
     }
 }
+
