@@ -101,3 +101,8 @@ hotel-web/target/hotel-web/upload/
 /hotel-dao/target/
 /hotel-service/target/
 /hotel-web/target/
+/hotel-pojo/hotel-pojo.iml
+/hotel-support.iml
+/hotel-commons/hotel-commons.iml
+/hotel-dao/hotel-dao.iml
+/hotel-pojo/hotel-pojo.iml

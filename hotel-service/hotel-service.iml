@@ -9,6 +9,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="hotel-dao" />
     <orderEntry type="module" module-name="hotel-pojo" />
     <orderEntry type="module" module-name="hotel-commons" />
     <orderEntry type="library" name="Maven: tk.mybatis:mapper:3.5.3" level="project" />
