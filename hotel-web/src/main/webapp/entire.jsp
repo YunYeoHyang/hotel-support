@@ -74,7 +74,7 @@
 					<li>
 						<a href="#" class="inactive">区域<i></i></a>
 						<ul style="display: none" id="oneLevel">
-							<li><a href="#">包河区</a></li> 
+							<li><a href="${pageContext.request.contextPath}">包河区</a></li>
 							<li><a href="#">庐阳区</a></li> 
 							<li><a href="#">蜀山区</a></li> 
 							<li><a href="#">瑶海区</a></li> 
@@ -106,7 +106,7 @@
 			<div class="recom clearfloat recomtwo">
 		    	<div class="content clearfloat box-s">
 		    		<div class="list clearfloat fl box-s">
-		    			<a href="house-details.jsp">
+		    			<a href="${pageContext.request.contextPath}/house.action?hid=${thisstock.hid}">
 			    			<div class="tu clearfloat">
 			    				<span></span>
 			    				<img src="${thisstock.houseImg}"/>

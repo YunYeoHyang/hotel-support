@@ -1,8 +1,8 @@
 package com.czxy.hotel.domain;
 
 
+import javax.persistence.Table;
 import java.util.Date;
-
 public class House {
 
   private Integer hid;

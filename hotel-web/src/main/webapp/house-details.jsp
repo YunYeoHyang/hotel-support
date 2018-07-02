@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -54,36 +56,15 @@
 		  </ul>
 		  <div class="am-share-footer"><button class="share_btn">取消</button></div>
 		</div>
-		
+		<c:forEach items="${hs}" var="thishouse">
 		<div class="clearfloat" id="main">		
 			<div class="service clearfloat">
 				<div class="slider one-time">
 					<div>
-						<img src="upload/room.jpg"/>
+						<img src="${thishouse.houseImg}"/>
 						<div class="tit clearfloat box-s">
-							<p class="one">华府骏苑1</p>
-							<p class="two">蜀山区-望潜交口</p>
-						</div>
-					</div>
-					<div>
-						<img src="upload/room.jpg"/>
-						<div class="tit clearfloat box-s">
-							<p class="one">华府骏苑2</p>
-							<p class="two">蜀山区-望潜交口</p>
-						</div>
-					</div>
-					<div>
-						<img src="upload/room.jpg"/>
-						<div class="tit clearfloat box-s">
-							<p class="one">华府骏苑3</p>
-							<p class="two">蜀山区-望潜交口</p>
-						</div>
-					</div>
-					<div>
-						<img src="upload/room.jpg"/>
-						<div class="tit clearfloat box-s">
-							<p class="one">华府骏苑4</p>
-							<p class="two">蜀山区-望潜交口</p>
+							<p class="one">${thishouse.regionName}</p>
+							<p class="two">${thishouse.houseAddress}</p>
 						</div>
 					</div>
 				</div>
@@ -91,32 +72,35 @@
 			
 			<div class="service-top clearfloat box-s">
 				<div class="left fl clearfloat box-s">
-					<p class="tit titwo">2500<span>元/月</span></p>
-					<p class="fu-tit">三室一厅一卫   |  125m²  |  普装</p>
+					<p class="tit titwo">${thishouse.rentIntention}<span>元/月</span></p>
+					<p class="fu-tit">${thishouse.apartment}</p>
 				</div>
 				<div class="right fl clearfloat">
 					<i class="iconfont icon-shoucang"></i>
 					<p>收藏</p>
 				</div>
 			</div>
-			
+            </c:forEach>
+
 			<div class="service-ctent clearfloat">
 				<div class="recom-tit clearfloat box-s">
 		    		<p>房屋信息</p>
 		    	</div>
+                <c:forEach items="${info}" var="thisinfo">
 		    	<div class="service-list clearfloat box-s">
 		    		<ul>
-		    			<li>类型：住宅</li>
-		    			<li>朝向：南</li>
-		    			<li>楼层：12/28 </li>
-		    			<li>装修：精装修</li>
-		    			<li>现状：空闲</li>
-		    			<li>可入驻：2016/03/07</li>
-		    			<li>建造年代：2008年</li>
-		    			<li>可看房：2016/03/07以后</li>
+		    			<li>类型：${thisinfo.houseType}</li>
+		    			<li>朝向：${thisinfo.orientation}</li>
+		    			<li>楼层：${thisinfo.level}</li>
+		    			<li>装修：${thisinfo.fitment}</li>
+		    			<li>现状：${thisinfo.actuality}</li>
+		    			<li>可入驻：${thisinfo.checkTime}</li>
+		    			<li>建造年代：${thisinfo.houseTime}</li>
+		    			<li>可看房：${thisinfo.seeTime}以后</li>
 		    		</ul>
-		    		<p class="service-tit">交通：公交8路、111、124、136、156</p>
-		    	</div>		    	
+		    		<p class="service-tit">交通：${thisinfo.traffic}</p>
+		    	</div>
+                </c:forEach>
 			</div>
 			
 			<div class="service-ctent clearfloat">
