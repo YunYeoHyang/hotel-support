@@ -94,4 +94,18 @@ public class User {
     this.integration = integration;
   }
 
+  @Override
+  public String toString() {
+    return "User{" +
+            "uid=" + uid +
+            ", uname='" + uname + '\'' +
+            ", upwd='" + upwd + '\'' +
+            ", uimg='" + uimg + '\'' +
+            ", uphone='" + uphone + '\'' +
+            ", umail='" + umail + '\'' +
+            ", uaddress='" + uaddress + '\'' +
+            ", account='" + account + '\'' +
+            ", integration=" + integration +
+            '}';
+  }
 }

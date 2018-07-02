@@ -17,6 +17,9 @@
     <link rel="stylesheet" type="text/css" href="css/loading.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 	<script type="text/javascript">
+		$(function () {
+			
+        })
 		$(window).load(function(){
 			$(".loading").addClass("loader-chanage")
 			$(".loading").fadeOut(300)
