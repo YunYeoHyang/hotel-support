@@ -3,7 +3,6 @@ package com.czxy.hotel.web.controller;
 import com.czxy.hotel.domain.User;
 import com.czxy.hotel.service.UserService;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;

@@ -16,12 +16,15 @@ public class UserServiceImpl implements UserService {
     @Resource
     private UserMapper um;
 
+
     @Override
     public List<User> findAllUser() {
+
         List<User> users = um.selectAll();
         for (User thisU : users) {
             System.err.println(thisU);
         }
         return users;
     }
+
 }
