@@ -13,12 +13,16 @@ import java.util.List;
 public class HouseController {
     @Resource
     private HouseService houseService;
+
     @RequestMapping("/list.action")
     public String list(Model model){
-    List<House> houses=houseService.findAll();
-    model.addAttribute("st",houses);
-    return "entire";
+
+        List<House> houses=houseService.findAll();
+        model.addAttribute("st",houses);
+        return "entire";
+
     }
 
 
 }
+
