@@ -109,7 +109,7 @@
 		    			</a>
 		    		</li>
 		    		<li>
-		    			<a href="entire.jsp">
+		    			<a href="${pageContext.request.contextPath}/list.action">
 			    			<img src="img/bao.png" />
 			    			<p>短租</p>
 		    			</a>
