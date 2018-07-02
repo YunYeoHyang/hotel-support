@@ -23,7 +23,7 @@ public class UserController {
         if (user != null){
             for (User thisU:allUser) {
                 System.out.println(thisU);
-                if (thisU.getUname().equals(user.getUname()) && thisU.getUpwd().equals(user.getUpwd())){
+                if (thisU.getUphone().equals(user.getUphone()) && thisU.getUpwd().equals(user.getUpwd())){
                     user=thisU;
                     b = true;
                     break;
