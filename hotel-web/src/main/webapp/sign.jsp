@@ -53,7 +53,10 @@
 					<input type="password" id="password" name="upwd" value="" placeholder="请输入密码" class="fl phone" />
 				</li>
 			</ul>
-			<<input type="submit" class="pay-btn clearfloat" value="登录" >
+            <div>
+                <h3>${msg}</h3>
+            </div>
+			<input type="submit" class="pay-btn clearfloat" value="登录" >
 
 			</input>
 			<div class="bottom clearfloat">
