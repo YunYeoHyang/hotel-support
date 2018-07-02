@@ -23,7 +23,7 @@ public class UserController {
         if (user != null){
             for (User thisU:allUser) {
                 System.out.println(thisU);
-                if (thisU.getUname().equals(user.getUname()) && thisU.getUpwd().equals(user.getUpwd())){
+                if (thisU.getUphone().equals(user.getUphone()) && thisU.getUpwd().equals(user.getUpwd())){
                     user=thisU;
                     b = true;
                     break;
@@ -32,7 +32,7 @@ public class UserController {
             System.out.println(b);
             if (b){
                 hsr.getSession().setAttribute("loginUser",user);
-                return "index";
+                return "p-center";
             }else {
                 hsr.setAttribute("msg","账号或密码输入错误请重新输入");
                 hsr.setAttribute("loginInfo",user);
