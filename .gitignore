@@ -29,3 +29,16 @@ hs_err_pid*
 *.iml
 out
 gen
+/hotel-web/src/main/resources/
+/hotel-service/target/
+hotel-dao/target/generated-sources/
+hotel-pojo/target/generated-sources/
+hotel-service/target/generated-sources/
+hotel-web/target/classes/db.properties
+hotel-web/target/classes/log4j.properties
+hotel-web/target/generated-sources/
+hotel-web/target/hotel-web/META-INF/
+hotel-web/target/hotel-web/WEB-INF/classes/db.properties
+hotel-web/target/hotel-web/WEB-INF/classes/log4j.properties
+hotel-web/target/hotel-web/WEB-INF/web.xml
+hotel-web/target/hotel-web/upload/

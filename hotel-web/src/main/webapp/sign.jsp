@@ -46,14 +46,17 @@
 			<ul>
 				<li class="clearfloat">
 					<i class="iconfont icon-phone fl"></i>
-					<input type="text" id="unam" name="uname" value="" placeholder="请输入手机号" class="fl phone" />
+					<input type="text" id="uphone" name="uphone" value="" placeholder="请输入手机号" class="fl phone" />
 				</li>
 				<li class="clearfloat">
 					<i class="iconfont icon-lock fl"></i>
 					<input type="password" id="password" name="upwd" value="" placeholder="请输入密码" class="fl phone" />
 				</li>
 			</ul>
-			<<input type="submit" class="pay-btn clearfloat" value="登录" >
+            <div>
+                <h3>${msg}</h3>
+            </div>
+			<input type="submit" class="pay-btn clearfloat" value="登录" >
 
 			</input>
 			<div class="bottom clearfloat">
