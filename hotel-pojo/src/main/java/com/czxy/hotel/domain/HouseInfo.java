@@ -1,7 +1,5 @@
 package com.czxy.hotel.domain;
 
-import java.util.Date;
-
 public class HouseInfo {
    /* `info_id` INT(11) NOT NULL AUTO_INCREMENT COMMENT '房屋id',
             `orientation` INT(11) DEFAULT NULL COMMENT '房间朝向',
@@ -17,7 +15,6 @@ public class HouseInfo {
     private Integer infoId;
     private String orientation;
     private String level;
-    private String square;
     private String houseType;
     private String actuality;
     private String houseTime;
@@ -25,6 +22,7 @@ public class HouseInfo {
     private String checkTime;
     private String seeTime;
     private String traffic;
+    private Integer hid;
 
     public HouseInfo() {
     }
@@ -51,14 +49,6 @@ public class HouseInfo {
 
     public void setLevel(String level) {
         this.level = level;
-    }
-
-    public String getSquare() {
-        return square;
-    }
-
-    public void setSquare(String square) {
-        this.square = square;
     }
 
     public String getHouseType() {
@@ -115,5 +105,13 @@ public class HouseInfo {
 
     public void setTraffic(String traffic) {
         this.traffic = traffic;
+    }
+
+    public void setHid(Integer hid) {
+        this.hid = hid;
+    }
+
+    public Integer getHid() {
+        return hid;
     }
 }

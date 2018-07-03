@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -44,6 +45,7 @@
 		
 		<div class="clearfloat" id="main">
 			<div class="recom clearfloat collection">
+				<c:forEach var="collection" items="${list}">
 		    	<div class="content clearfloat box-s">
 		    		<div class="list clearfloat fl box-s">
 		    			<a href="house-details.jsp">
@@ -53,53 +55,18 @@
 			    			</div>
 			    			<div class="right clearfloat">
 			    				<div class="tit clearfloat">
-			    					<p class="fl">华府骏苑</p>
+			    					<p class="fl">${collection.house.regionName}</p>
 			    					<i class="fr iconfont icon-delete delete"></i>
 			    				</div>
-			    				<p class="recom-jianjie">三室一厅一卫   |  125m²  |  普装</p>
+			    				<p class="recom-jianjie">${collection.house.apartment}   |  ${collection.house.houseSquare}m²  |  ${collection.house.houseType}</p>
 			    				<div class="recom-bottom clearfloat">
-			    					2500<samp>元/月</samp>
-			    				</div>
-			    			</div>
-		    			</a>
-		    		</div>
-		    		<div class="list clearfloat fl box-s">
-		    			<a href="house-details.jsp">
-			    			<div class="tu clearfloat">
-			    				<span></span>
-			    				<img src="upload/list-tu.jpg"/>
-			    			</div>
-			    			<div class="right clearfloat">
-			    				<div class="tit clearfloat">
-			    					<p class="fl">华府骏苑</p>
-			    					<i class="fr iconfont icon-delete delete"></i>
-			    				</div>
-			    				<p class="recom-jianjie">三室一厅一卫   |  125m²  |  普装</p>
-			    				<div class="recom-bottom clearfloat">
-			    					2500<samp>元/月</samp>
-			    				</div>
-			    			</div>
-		    			</a>
-		    		</div>
-		    		<div class="list clearfloat fl box-s">
-		    			<a href="house-details.jsp">
-			    			<div class="tu clearfloat">
-			    				<span></span>
-			    				<img src="upload/list-tu.jpg"/>
-			    			</div>
-			    			<div class="right clearfloat">
-			    				<div class="tit clearfloat">
-			    					<p class="fl">华府骏苑</p>
-			    					<i class="fr iconfont icon-delete delete"></i>
-			    				</div>
-			    				<p class="recom-jianjie">三室一厅一卫   |  125m²  |  普装</p>
-			    				<div class="recom-bottom clearfloat">
-			    					2500<samp>元/月</samp>
+			    					${collection.house.rentIntention}<samp>元/月</samp>
 			    				</div>
 			    			</div>
 		    			</a>
 		    		</div>
 		    	</div>
+				</c:forEach>
 		    </div>
 		</div>
 	</body>

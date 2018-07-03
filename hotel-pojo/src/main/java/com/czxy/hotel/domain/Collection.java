@@ -1,11 +1,14 @@
 package com.czxy.hotel.domain;
 
 
+import java.util.Date;
+
 public class Collection {
 
   private Integer uid;
   private Integer hid;
-  private java.sql.Date collectDate;
+  private Date collectDate;
+  private House house;
 
 
   public Integer getUid() {
@@ -26,12 +29,20 @@ public class Collection {
   }
 
 
-  public java.sql.Date getCollectDate() {
+  public Date getCollectDate() {
     return collectDate;
   }
 
-  public void setCollectDate(java.sql.Date collectDate) {
+  public void setCollectDate(Date collectDate) {
     this.collectDate = collectDate;
   }
 
+
+  public void setHouse(House house) {
+    this.house = house;
+  }
+
+  public House getHouse() {
+    return house;
+  }
 }

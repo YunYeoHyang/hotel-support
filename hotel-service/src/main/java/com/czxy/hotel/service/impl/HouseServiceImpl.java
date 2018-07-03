@@ -1,9 +1,7 @@
 package com.czxy.hotel.service.impl;
 
-import com.czxy.hotel.dao.CategoryMapper;
 import com.czxy.hotel.dao.HouseInfoMapper;
 import com.czxy.hotel.dao.HouseMapper;
-import com.czxy.hotel.domain.Category;
 import com.czxy.hotel.domain.House;
 import com.czxy.hotel.domain.HouseInfo;
 import com.czxy.hotel.service.HouseService;

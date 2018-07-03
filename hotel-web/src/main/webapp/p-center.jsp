@@ -107,12 +107,14 @@
 				</ul>
 			</div>
 			<div class="p-list p-listwo clearfloat box-s">
-				<a href="collection.jsp" class="clearfloat">
+				<a href="${pageContext.request.contextPath}/findAll.action" class="clearfloat">
 					<i class="iconfont icon-favorite fl xing"></i>
 					<span class="fl">我的收藏</span>
 					<i class="iconfont icon-arrowright fr you"></i>
 				</a>
 			</div>
+
+
 			<div class="p-list p-listwo clearfloat box-s">
 				<a href="pay-rent.jsp" class="clearfloat">
 					<i class="iconfont icon-money fl money"></i>

@@ -1,13 +1,15 @@
 package com.czxy.hotel.domain;
 
 
+import java.util.Date;
+
 public class Contract {
 
   private Integer uid;
   private Integer hid;
   private Integer contractId;
-  private java.sql.Date contractStartdate;
-  private java.sql.Date contractEnddate;
+  private Date contractStartdate;
+  private Date contractEnddate;
   private double deposit;
   private double monthlyRent;
   private double payment;
@@ -43,20 +45,20 @@ public class Contract {
   }
 
 
-  public java.sql.Date getContractStartdate() {
+  public Date getContractStartdate() {
     return contractStartdate;
   }
 
-  public void setContractStartdate(java.sql.Date contractStartdate) {
+  public void setContractStartdate(Date contractStartdate) {
     this.contractStartdate = contractStartdate;
   }
 
 
-  public java.sql.Date getContractEnddate() {
+  public Date getContractEnddate() {
     return contractEnddate;
   }
 
-  public void setContractEnddate(java.sql.Date contractEnddate) {
+  public void setContractEnddate(Date contractEnddate) {
     this.contractEnddate = contractEnddate;
   }
 

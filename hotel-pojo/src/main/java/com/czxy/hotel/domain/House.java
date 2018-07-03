@@ -1,10 +1,11 @@
 package com.czxy.hotel.domain;
 
 
-import javax.persistence.Table;
+import javax.persistence.Id;
 import java.util.Date;
 public class House {
 
+  @Id
   private Integer hid;
   private Integer uid;
   private Date startdate;
@@ -16,6 +17,7 @@ public class House {
   private Integer isNew;
   private String houseAddress;
   private String houseImg;
+  private Integer houseSquare;
 
 
   public Integer getHid() {
@@ -116,4 +118,11 @@ public class House {
     this.houseImg = houseImg;
   }
 
+  public void setHouseSquare(Integer houseSquare) {
+    this.houseSquare = houseSquare;
+  }
+
+  public Integer getHouseSquare() {
+    return houseSquare;
+  }
 }
