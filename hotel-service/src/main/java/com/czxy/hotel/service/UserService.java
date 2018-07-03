@@ -6,6 +6,9 @@ import java.util.List;
 
 public interface UserService {
 
-    public List<User> findAllUser();
+    User login(User user);
 
+    void register(User user);
+
+    List<User> findAll();
 }

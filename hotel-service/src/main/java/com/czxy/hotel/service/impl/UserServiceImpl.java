@@ -17,14 +17,18 @@ public class UserServiceImpl implements UserService {
     private UserMapper um;
 
 
-    @Override
-    public List<User> findAllUser() {
+    public List<User> findAll() {
+        return um.selectAll();
+    }
 
-        List<User> users = um.selectAll();
-        for (User thisU : users) {
-            System.err.println(thisU);
-        }
-        return users;
+    public User login(User user) {
+        User loginUser = um.selectOne(user);
+        return loginUser;
+    }
+
+    public void register(User user) {
+        um.insert(user);
+
     }
 
 }

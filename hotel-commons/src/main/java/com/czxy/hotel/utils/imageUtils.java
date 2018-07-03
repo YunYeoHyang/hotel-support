@@ -1,4 +1,4 @@
-package main.java.com.czxy.hotel.utils;
+package com.czxy.hotel.utils;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

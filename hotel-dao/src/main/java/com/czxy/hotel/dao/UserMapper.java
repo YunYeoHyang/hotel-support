@@ -1,7 +1,7 @@
 package com.czxy.hotel.dao;
 
 import com.czxy.hotel.domain.User;
-import tk.mybatis.mapper.common.Mapper;
+import com.czxy.hotel.utils.MapperUtils;
 
-public interface UserMapper extends Mapper<User> {
+public interface UserMapper extends MapperUtils<User> {
 }

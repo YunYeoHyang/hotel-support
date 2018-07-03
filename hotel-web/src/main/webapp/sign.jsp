@@ -46,7 +46,7 @@
 			<ul>
 				<li class="clearfloat">
 					<i class="iconfont icon-phone fl"></i>
-					<input type="text" id="uphone" name="uphone" value="" placeholder="请输入手机号" class="fl phone" />
+					<input type="text" id="uphone" name="uphone" value="${phone}" placeholder="请输入手机号" class="fl phone" />
 				</li>
 				<li class="clearfloat">
 					<i class="iconfont icon-lock fl"></i>

@@ -1,4 +1,4 @@
-package main.java.com.czxy.hotel.utils;
+package com.czxy.hotel.utils;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
