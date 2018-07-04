@@ -16,6 +16,66 @@
     <link rel="stylesheet" type="text/css" href="css/loading.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 	<script type="text/javascript">
+
+
+        var InterValObj; //timer变量，控制时间
+        var count = 120; //间隔函数，1秒执行
+        var curCount;//当前剩余秒数
+        var code = ""; //验证码
+        var codeLength = 6;//验证码长度
+
+        function sendMessage() {
+            curCount = count;
+            var phone = $("#phone").val();
+            var jbPhoneTip = $("#jbPhoneTip").text();
+            if (phone != "") {
+                    // 产生验证码
+                    for ( var i = 0; i < codeLength; i++) {
+                        code += parseInt(Math.random() * 9).toString();
+                    }
+                    // 设置button效果，开始计时
+                    $("#btnSendCode").attr("disabled", "true");
+                    $("#btnSendCode").val("请在" + curCount + "秒内输入验证码");
+                    InterValObj = window.setInterval(SetRemainTime, 1000); // 启动计时器，1秒执行一次
+                    // 向后台发送处理数据
+                    $.ajax({
+                        type: "POST", // 用POST方式传输
+                        dataType: "text", // 数据格式:JSON
+                        url: "modify.action", // 目标地址
+                        data: "phone=" + phone + "code" + code
+
+                    });
+            }
+        }
+
+        //timer处理函数
+        function SetRemainTime() {
+            if (curCount == 0) {
+                window.clearInterval(InterValObj);// 停止计时器
+                $("#btnSendCode").removeAttr("disabled");// 启用按钮
+                $("#btnSendCode").val("重新发送验证码");
+                code = ""; // 清除验证码。如果不清除，过时间后，输入收到的验证码依然有效
+            }else {
+                curCount--;
+                $("#btnSendCode").val("请在" + curCount + "秒内输入验证码");
+            }
+        };
+
+        $(document).ready(function() {
+            $("#SmsCheckCode").blur(function() {
+                var SmsCheckCodeVal = $("#SmsCheckCode").val();
+                // 向后台发送处理数据
+                $.ajax({
+                    url : "checkCode.action",
+                    data : {SmsCheckCode : SmsCheckCodeVal},
+                    type : "POST",
+                    dataType : "text"
+                });
+            });
+        });
+
+
+
 			function register() {
                 // var phone = document.getElementById("1").value;
                 var password = document.getElementById("4").value;
@@ -60,14 +120,12 @@
 			<ul>
 				<li class="clearfloat">
 					<p class="tit fl">手机号</p>
-					<input type="text" id="1" name="phone" class="shuru fl" placeholder="请输入手机号码" />
+					<input type="text" id="phone" name="phone" class="shuru fl" placeholder="请输入手机号码" />
 				</li>
 				<li class="clearfloat">
 					<p class="tit fl">验证码</p>
-					<input type="text" id="2" name="message" class="shuru shurutwo fl" placeholder="请输入短信验证码" />
-					<a href="#loginmodalt" id="modaltrigger">
-						<input type="button" id="3" value="获取短信验证码" class="btn fr" />
-					</a>
+					<input type="text" id="SmsCheckCode" name="SmsCheckCode" class="shuru shurutwo fl" placeholder="请输入短信验证码" />
+						<input type="button" id="btnSendCode" name="btnSendCode" value="获取短信验证码" class="btn fr" onclick="sendMessage()" />
 				</li>
 				<li class="clearfloat">
 					<p class="tit fl">密码</p>
