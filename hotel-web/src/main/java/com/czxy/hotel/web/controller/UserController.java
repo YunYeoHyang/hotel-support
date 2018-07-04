@@ -41,11 +41,13 @@ public class UserController {
 
     @RequestMapping("/register.action")
     public String register(User user,HttpServletRequest request){
-        System.out.println(user);
+
         int s = UUID.randomUUID().hashCode();
         System.out.println(s);
         user.setUid(s);
-        request.setAttribute("phone",user.getUphone());
+        user.setUphone(request.getParameter("phone"));
+        user.setUpwd(request.getParameter("password"));
+        System.out.println(user);
         us.register(user);
         return "sign";
     }

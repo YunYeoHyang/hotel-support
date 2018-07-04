@@ -60,22 +60,22 @@
 			<ul>
 				<li class="clearfloat">
 					<p class="tit fl">手机号</p>
-					<input type="text" id="1" name="phone" value="" class="shuru fl" placeholder="请输入手机号码" />
+					<input type="text" id="1" name="phone" class="shuru fl" placeholder="请输入手机号码" />
 				</li>
 				<li class="clearfloat">
 					<p class="tit fl">验证码</p>
-					<input type="text" id="2" name="message" value="" class="shuru shurutwo fl" placeholder="请输入短信验证码" />
+					<input type="text" id="2" name="message" class="shuru shurutwo fl" placeholder="请输入短信验证码" />
 					<a href="#loginmodalt" id="modaltrigger">
 						<input type="button" id="3" value="获取短信验证码" class="btn fr" />
 					</a>
 				</li>
 				<li class="clearfloat">
 					<p class="tit fl">密码</p>
-					<input type="text" id="4" name="password" value="" class="shuru fl" placeholder="请设置长度6-12位的密码" />
+					<input type="password" id="4" name="password" class="shuru fl" placeholder="请设置长度6-12位的密码" />
 				</li>
 				<li class="clearfloat">
 					<p class="tit fl">确认密码</p>
-					<input type="text" id="5" name="password1" value="" class="shuru fl" placeholder="请再次输入密码" />
+					<input type="password" id="5" name="password1" class="shuru fl" placeholder="请再次输入密码" />
 				</li>
 			</ul>
 			<a onclick="register()" class="pay-btn clearfloat">
