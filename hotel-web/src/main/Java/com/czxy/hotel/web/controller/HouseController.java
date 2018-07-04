@@ -17,10 +17,9 @@ public class HouseController{
 
     @RequestMapping("/list.action")
     public String list(String id,Model model){
-
         List<House> houses=houseService.findAll(id);
         model.addAttribute("st",houses);
-        return "entire";
+        return "/entire";
     }
     @RequestMapping("/house.action")
     public String house(String hid,Model model){
@@ -28,7 +27,7 @@ public class HouseController{
       List<HouseInfo> houseinfos=houseService.info(hid);
       model.addAttribute("hs",house);
       model.addAttribute("info",houseinfos);
-        return "house-details";
+        return "/house-details";
     }
 
 

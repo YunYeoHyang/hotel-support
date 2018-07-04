@@ -14,4 +14,7 @@ public interface HouseMapper extends Mapper<House> {
 
 @Select("select*from house where hid=#{hid} ")
     List<House> house(@Param("hid") String hid);
+
+    @Select("select * from house where hid = #{hid}")
+    public House ByHid(@Param("hid") Integer hid);
 }

@@ -14,7 +14,7 @@
         </a>
     </li>
     <li>
-        <a href="schedule.jsp">
+        <a href="/findAllSchedule.action">
             <i class="iconfont icon-richengbiao"></i>
             <p>看房日程</p>
         </a>
