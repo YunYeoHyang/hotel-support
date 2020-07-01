@@ -49,7 +49,7 @@
     <woodstox.version>4.4.1</woodstox.version>
     <neethi.version>3.0.2</neethi.version>
 
-    <quartz.version>2.2.3</quartz.version>
+    <quartz.version>2.3.2</quartz.version>
 
     <poi.version>3.9</poi.version>
     <xmlbeans-version>2.4.0</xmlbeans-version>
