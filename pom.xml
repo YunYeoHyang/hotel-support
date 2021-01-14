@@ -51,7 +51,7 @@
 
     <quartz.version>2.2.3</quartz.version>
 
-    <poi.version>3.9</poi.version>
+    <poi.version>4.1.2</poi.version>
     <xmlbeans-version>2.4.0</xmlbeans-version>
 
     <jcommon.version>1.0.23</jcommon.version>
