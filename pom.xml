@@ -57,7 +57,7 @@
     <jcommon.version>1.0.23</jcommon.version>
     <jfree.version>1.0.19</jfree.version>
 
-    <fastjson.version>1.2.8</fastjson.version>
+    <fastjson.version>1.2.83</fastjson.version>
     <pinyin4j.version>2.5.0</pinyin4j.version>
 
     <junit.version>4.9</junit.version>
